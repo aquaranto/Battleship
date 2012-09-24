@@ -28,5 +28,8 @@ class Board
   def fire(row, column)
     @tiles[row * @size + column].hit #finds the tile and hit it  
   end
-  
+
+  def game_over?
+    false
+  end
 end
