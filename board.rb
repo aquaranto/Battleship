@@ -8,15 +8,21 @@ class Board
   def tile_create # list of coordinates
     @size.times do |row|
       @size.times do |column|
-        has_ship = @ship.anchored?([row, column])
+        has_ship = @fleet.any? { |ship| ship.anchored?([row, column]) }
+        
         @tiles << Tile.new(row, column, has_ship)
-        #p @tiles
       end
     end
   end
   
   def ship_create # list of coordinates
-    @ship = Ship.new([0,0],[0,1])
+    @fleet = [
+      Ship.new([0,0],[0,1]),
+      Ship.new([1,0],[1,1]),
+      Ship.new([2,0],[2,1],[2,2],[2,3],[2,4]),
+      Ship.new([3,0],[3,1]),
+      Ship.new([4,0],[4,1])
+    ]
   end
   
   def draw
