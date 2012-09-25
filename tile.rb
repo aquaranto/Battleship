@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Tile
 
   def initialize(row, column, ship)

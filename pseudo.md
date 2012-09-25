@@ -26,9 +26,13 @@
 
   user input for row and then column( 2 lines )
   find tile on board
-  change status to hit
-  change marker to hit marker
+  change status to called
+  change marker to called marker
   redraw the board
+
+  find the ship
+	tell it that it's gettin shot at
+	
 
  =============
  =============
@@ -37,6 +41,8 @@
 run a complete game
 
 ask the board if it's done 
+	are all the ships sunk?
+		ships are sunk if they're hit
 if the game is not finished
 keep having turns (ask, hit, redraw)
 if it is over, determine winner
