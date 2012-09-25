@@ -1,21 +1,24 @@
 class Tile
 
-  def initialize(row, column)
+  def initialize(row, column, ship)
     @row = row
     @column = column
-    @hit = false 
+    @called = false 
+    @ship = ship
   end
 
   def marker
-    if @hit 
+    if @called
       "o"
+    elsif @ship
+      "x"
     else
       "~"
     end
   end
   
-  def hit
-    @hit = true
+  def called
+    @called = true
   end
   
 end

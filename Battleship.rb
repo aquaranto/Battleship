@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 require './tile'
 require './board'
+require './ship'
 
 new_game = Board.new
+new_game.ship_create
 new_game.tile_create
 new_game.draw
 

@@ -40,3 +40,25 @@ ask the board if it's done
 if the game is not finished
 keep having turns (ask, hit, redraw)
 if it is over, determine winner
+
+ =============
+ =============
+ =============
+
+define the ships
+	how many tiles it takes up - all the same (for now)
+	how many - 5
+	orientation -vertical/ horizontal
+	tiles that it's on
+place them according to nick's rule
+	(in a line)
+draw them
+
+firing on ships
+
+
+
+
+
+
+
