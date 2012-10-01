@@ -17,11 +17,9 @@ class Board
   
   def ship_create # list of coordinates
     @fleet = [
-      Ship.new([0,0],[0,1]),
-      Ship.new([1,0],[1,1]),
-      Ship.new([2,0],[2,1],[2,2],[2,3],[2,4]),
-      Ship.new([3,0],[3,1]),
-      Ship.new([4,0],[4,1])
+      Ship.new([0, 0], :right, 2),
+      Ship.new([3, 0], :right, 5),
+      Ship.new([5, 5], :down,  4)
     ]
   end
   
