@@ -28,14 +28,14 @@ class Board
     #print marker
     @size.times do |row|
       @size.times do |column|
-        print @tiles[row * @size + column].marker + ' '
+        print @tiles[column * @size + row].marker + ' '
       end
       print "\n"
     end
   end
   
   def fire(row, column)
-    @tiles[row * @size + column].called #finds the tile and called it  
+    @tiles[column * @size + row].called #finds the tile and called it  
   end
 
   def game_over?
