@@ -26,15 +26,13 @@ class Board
     # For each ship in the fleet:
     #  take its coords
     #  add its coords to our tiles array
-    @ship_coordinates = []
+    @all_ship_coordinates = []
     
     @fleet.each do |ship|
-      ship.coords.each do |coord|
-        @ship_coordinates << coord
-      end
+      @all_ship_coordinates += ship.coords
     end
     
-    puts @ship_coordinates.inspect
+    # p @all_ship_coordinates
   end
   
   def draw
