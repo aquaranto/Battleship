@@ -63,6 +63,7 @@ class Board
     return true if @all_ship_coordinates.empty?
     
     # 2: person wants to quit
+    
     false
   end  
   
