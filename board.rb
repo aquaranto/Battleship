@@ -18,8 +18,8 @@ class Board
   def ship_create # list of coordinates
     @fleet = [
       Ship.new([0, 0], :right, 2),
-      Ship.new([3, 0], :right, 5),
-      Ship.new([5, 5], :down,  4)
+      # Ship.new([3, 0], :right, 5),
+      # Ship.new([5, 5], :down,  4)
     ]
     
     # Keep an array of all tiles in all ships:
@@ -32,7 +32,7 @@ class Board
       @all_ship_coordinates += ship.coords
     end
     
-    # p @all_ship_coordinates
+    p "Original ship tiles: #{ @all_ship_coordinates }"
   end
   
   def draw
@@ -48,9 +48,21 @@ class Board
   
   def fire(row, column)
     @tiles[column * @size + row].called #finds the tile and called it  
+    
+    # if hit ship tile, remove from @all_ship_tiles array
+    p @all_ship_coordinates.delete([column,row])
+    
+    p "Remaining ship tiles: #{ @all_ship_coordinates }"
+    # p "Remaining ship tiles: " + @all_ship_coordinates.to_s
   end
 
   def game_over?
+    # 1: goal of the game is completed
+    #  when all ship tiles are hit (o)
+    
+    
+    # 2: person wants to quit
     false
-  end
+  end  
+  
 end
