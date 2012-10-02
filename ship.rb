@@ -1,4 +1,7 @@
 class Ship
+  
+  attr_reader :coords
+  
 # get starting coordinates, direction, and ship length
 #create an array for the coordinates of the ship. 
 # ship starting at (x,y), next tile @ (x+1, y), next (x+2, y)

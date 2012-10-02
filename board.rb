@@ -21,6 +21,20 @@ class Board
       Ship.new([3, 0], :right, 5),
       Ship.new([5, 5], :down,  4)
     ]
+    
+    # Keep an array of all tiles in all ships:
+    # For each ship in the fleet:
+    #  take its coords
+    #  add its coords to our tiles array
+    @ship_coordinates = []
+    
+    @fleet.each do |ship|
+      ship.coords.each do |coord|
+        @ship_coordinates << coord
+      end
+    end
+    
+    puts @ship_coordinates.inspect
   end
   
   def draw
