@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+
 require './tile'
 require './board'
 require './ship'

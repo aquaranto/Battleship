@@ -1,7 +1,9 @@
 class Board
 
+  FIRST_COLUMN_LETTER = "A"
+
   def initialize
-    @size = 10
+    @size = 11
     @tiles = []
   end
   
@@ -38,11 +40,32 @@ class Board
   def draw
     #for each tile
     #print marker
+    
+    # determine the width of each printed column
+    column_width = @size.to_s.length + 1
+
+    # print that blank space on the header row of columns
+    print "".rjust(column_width)
+
+    # print the header row for the columns
+
+    column_letter = FIRST_COLUMN_LETTER
+
+    @size.times do |column_number|
+      print column_letter.rjust(column_width)
+      column_letter.next!
+    end
+
+    puts
+
     @size.times do |row|
+      print row.to_s.rjust(column_width)
+
       @size.times do |column|
-        print @tiles[column * @size + row].marker + ' '
+        print @tiles[column * @size + row].marker.rjust column_width
       end
-      print "\n"
+
+      puts
     end
   end
   
