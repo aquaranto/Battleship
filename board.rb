@@ -20,8 +20,8 @@ class Board
   def ship_create # list of coordinates
     @fleet = [
       Ship.new([0, 0], :right, 2),
-      # Ship.new([3, 0], :right, 5),
-      # Ship.new([5, 5], :down,  4)
+      Ship.new([3, 0], :right, 5),
+      Ship.new([5, 5], :down,  4)
     ]
     
     # Keep an array of all tiles in all ships:
